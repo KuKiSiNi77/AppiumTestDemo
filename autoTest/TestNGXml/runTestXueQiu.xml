@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="卡包测试" parallel="classes" thread-count="1" preserve-order="true">
+    <test name="储值">
+        <!--verbose="2" 控制记录日志的详细级别-->
+        <!--preserve-order="true" 控制按顺序执行-->
+        <parameter name="port" value="4755"/>
+        <parameter name="udid" value="192.168.56.102:5555"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="appPackage" value="com.xueqiu.android"/>
+        <parameter name="appActivity" value=".view.WelcomeActivityAlias"/>
+        <parameter name="isAppBrand" value="false"/>
+        <parameter name="androidProcess" value=""/>
+        <classes>
+            <class name="iwinnerExample.XueQiu"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+</suite>

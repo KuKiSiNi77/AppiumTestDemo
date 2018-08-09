@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="测试" parallel="tests" thread-count="1">
+    <test name="卡包储值">
+        <!--verbose="2" 控制记录日志的详细级别-->
+        <!--preserve-order="true" 控制按顺序执行-->
+        <parameter name="port" value="4766"/>
+        <parameter name="udid" value="06157df6f1f6813c"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="appPackage" value="com.tencent.mm"/>
+        <parameter name="appActivity" value=".ui.LauncherUI"/>
+        <parameter name="isAppBrand" value="true"/>
+        <parameter name="androidProcess" value="com.tencent.mm:appbrand0"/>
+        <classes>
+            <class name="iwinnerExample.Example"/>
+        </classes>
+    </test>
+    <test name="雪球demo">
+        <!--verbose="2" 控制记录日志的详细级别-->
+        <!--preserve-order="true" 控制按顺序执行-->
+        <parameter name="port" value="4755"/>
+        <parameter name="udid" value="192.168.56.101:5555"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="appPackage" value="com.xueqiu.android"/>
+        <parameter name="appActivity" value=".view.WelcomeActivityAlias"/>
+        <parameter name="isAppBrand" value="false"/>
+        <parameter name="androidProcess" value=""/>
+        <classes>
+            <class name="iwinnerExample.XueQiu"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+</suite>

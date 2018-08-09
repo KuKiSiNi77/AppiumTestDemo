@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="雪球demo"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.634">
+  <properties />
+  
+  
+            <testcase name="demo" time="7.634" classname="iwinnerExample.XueQiu" />
+      
+</testsuite>
